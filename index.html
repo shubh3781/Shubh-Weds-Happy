@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shubh &amp; Happy | Shubh Vivah | 11 December 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#3a0d1c;--crimson:#b3122b;--pink:#d81b60;--yellow:#f6b81a;--green:#0f7a4a;--blue:#1d4e9e;--cream:#fff3d6;--tile:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Crect width='44' height='44' fill='%23b3122b'/%3E%3Cpath d='M22 3L41 22L22 41L3 22Z' fill='%23f6b81a'/%3E%3Cpath d='M22 9L35 22L22 35L9 22Z' fill='%230f7a4a'/%3E%3Cpath d='M22 15L29 22L22 29L15 22Z' fill='%231d4e9e'/%3E%3Crect x='20' y='20' width='4' height='4' fill='%23fff3d6'/%3E%3Ccircle cx='0' cy='0' r='3' fill='%23fff3d6'/%3E%3Ccircle cx='44' cy='0' r='3' fill='%23fff3d6'/%3E%3Ccircle cx='0' cy='44' r='3' fill='%23fff3d6'/%3E%3Ccircle cx='44' cy='44' r='3' fill='%23fff3d6'/%3E%3C/svg%3E")}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.2rem;line-height:1.6;color:var(--ink);background:var(--cream)}
+h1,h2,h3{font-family:'Rozha One',serif;font-weight:400;color:var(--crimson);line-height:1.2}
+a{color:inherit}
+.patola{height:44px;background:var(--tile) 0 0/44px 44px repeat-x;border-top:3px solid var(--yellow);border-bottom:3px solid var(--yellow)}
+.bandhani{height:40px;background:radial-gradient(circle,#fff 2.6px,transparent 3.2px) 0 0/16px 16px,radial-gradient(circle,var(--yellow) 2px,transparent 2.6px) 8px 8px/16px 16px,var(--pink)}
+/* doors */
+#doors{position:fixed;inset:0;z-index:50;display:flex;transition:visibility 0s 1.6s}
+#doors.open{visibility:hidden}
+.leaf{flex:1;display:flex;align-items:center;border:6px solid var(--yellow);transition:transform 1.5s cubic-bezier(.7,0,.2,1);background:radial-gradient(circle,rgba(246,184,26,.6) 3px,transparent 3.6px) 0 0/28px 28px,radial-gradient(circle,rgba(255,255,255,.5) 2px,transparent 2.6px) 14px 14px/28px 28px,var(--crimson)}
+.leaf.l{justify-content:flex-end;border-right-width:3px}.leaf.r{border-left-width:3px}
+.knob{width:34px;height:34px;border-radius:50%;margin:0 14px;background:radial-gradient(circle at 35% 30%,#fff3b8,var(--yellow) 55%,#8a6212)}
+#doors.open .l{transform:translateX(-101%)}#doors.open .r{transform:translateX(101%)}
+#enter{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;width:min(90vw,420px);background:var(--cream);color:var(--ink);padding:1.6rem 1rem;border:16px solid transparent;background:linear-gradient(var(--cream),var(--cream)) padding-box,var(--tile) 0 0/32px 32px border-box;transition:opacity .4s}
+#doors.open #enter{opacity:0}
+#enter .dear{font-family:'Rozha One';color:var(--crimson);font-size:clamp(1.6rem,6vw,2.4rem);margin:.3rem 0 1.2rem}
+button,.btn{font:inherit;font-weight:600;cursor:pointer;border:2px solid var(--crimson);background:var(--crimson);color:var(--cream);padding:.5rem 1.5rem;border-radius:999px;text-decoration:none;display:inline-block}
+button:hover,.btn:hover{background:var(--green);border-color:var(--green)}
+.ghost{background:transparent;color:var(--crimson)}
+.ghost:hover{color:var(--cream)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+/* hero: palace at dusk */
+.hero{position:relative;overflow:hidden;text-align:center;color:var(--cream);padding:5rem 1rem 19rem;background:linear-gradient(#2b1055 0%,#8e1b5e 40%,#e8651f 75%,#f6b81a 100%)}
+.hero p{color:var(--cream)}
+.hero .inv{font-style:italic;color:var(--yellow)}
+.hero h1{font-size:clamp(3rem,13vw,6.5rem);margin:.4rem 0;color:var(--yellow);text-shadow:3px 3px 0 var(--crimson)}
+.names{font-family:'Rozha One';font-size:clamp(2rem,8vw,3.6rem);color:var(--cream)}
+.names span{color:#ffd166}
+.date{font-size:1.5rem;margin-top:.6rem}
+#count{display:flex;justify-content:center;gap:.8rem;margin:1.8rem 0 0;flex-wrap:wrap}
+#count div{min-width:76px;padding:.6rem .4rem;border:2px solid var(--yellow);border-radius:60px 60px 8px 8px;background:rgba(58,13,28,.6)}
+#count b{display:block;font-family:'Rozha One';font-size:2rem;color:var(--yellow);font-weight:400}
+.palace{position:absolute;left:0;right:0;bottom:0;width:100%;height:290px}.garland{position:absolute;top:0;left:0;width:100%;height:90px;pointer-events:none}
+section{max-width:960px;margin:0 auto;padding:2.5rem 1.2rem}
+section>h2{text-align:center;font-size:clamp(1.8rem,6vw,2.6rem);margin-bottom:1.5rem}
+section>h2::after{content:"\2756";display:block;font-size:1rem;color:var(--pink);margin-top:.3rem}
+.panel{border:16px solid transparent;border-radius:4px;padding:1.4rem;text-align:center;background:linear-gradient(#fffaf0,#fffaf0) padding-box,var(--tile) 0 0/32px 32px border-box}
+.panel p{margin:.6rem 0}
+.blessing{text-align:center;font-style:italic;color:var(--crimson);max-width:680px;margin:0 auto 1.5rem}
+.cols{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.day{margin-bottom:2rem}
+.day>h3{text-align:center;font-size:1.6rem;margin-bottom:1rem}
+.side{background:#fffaf0;border:2px solid var(--yellow);border-radius:6px;padding:1rem 1.2rem;box-shadow:5px 5px 0 var(--pink)}
+.side::before{content:"";display:block;height:12px;margin:-1rem -1.2rem .8rem;border-radius:4px 4px 0 0;background:radial-gradient(circle,#fff 2px,transparent 2.6px) 0 0/12px 12px,radial-gradient(circle,var(--yellow) 1.5px,transparent 2px) 6px 6px/12px 12px,var(--green)}
+.side h4{font-family:'Rozha One';font-weight:400;color:var(--blue);font-size:1.25rem;margin-bottom:.4rem}
+.ev{display:flex;gap:.8rem;align-items:baseline;justify-content:space-between;padding:.55rem 0;border-top:1px dashed var(--pink)}
+.ev:first-of-type{border-top:0}
+.ev b{display:block;color:var(--crimson);font-weight:600}
+.ev small{display:block;opacity:.85;font-size:1rem;line-height:1.3}
+.ev button{padding:.1rem .8rem;font-size:.9rem;flex:none}
+.venues{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.gallery{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.ph{aspect-ratio:3/4;border:4px solid var(--crimson);outline:3px solid var(--yellow);border-radius:110px 110px 6px 6px;overflow:hidden;background:#fffaf0;display:grid;place-items:center;text-align:center;font-size:1rem;color:var(--crimson)}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.story{max-width:640px;margin:1.5rem auto 0;text-align:center}
+.rsvp{text-align:center}
+.rsvp input{font:inherit;padding:.5rem 1rem;border-radius:999px;border:2px solid var(--pink);background:#fff;color:var(--ink);width:min(100%,300px);margin:.3rem}
+footer{text-align:center;padding:2rem 1rem 3rem;color:var(--crimson)}
+@media (prefers-reduced-motion:reduce){.leaf{transition:none}}
+.sw{width:52px;height:52px;color:var(--yellow);flex:none}
+.leaf{position:relative}
+.leaf .sw{position:absolute;top:12%;width:90px;height:90px}
+.leaf.l .sw{right:16%}.leaf.r .sw{left:16%}
+.om{font-family:'Rozha One',serif;font-size:3rem;line-height:1;color:var(--crimson)}
+.sym{display:flex;justify-content:center;align-items:center;gap:1.2rem}
+.sym .om{color:var(--yellow);font-size:3.2rem;text-shadow:2px 2px 0 var(--crimson)}
+.well{max-width:340px;margin:.5rem auto 0;padding:0 1rem}.well svg{display:block;width:100%;height:auto}
+.cols>.side:only-child{grid-column:1/-1;max-width:420px;width:100%;margin:0 auto}
+.acts{display:flex;gap:.4rem;flex:none;align-items:center}.ev .btn{padding:.1rem .8rem;font-size:.9rem}.ev .btn:hover{color:var(--cream)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="sw" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="square" stroke-linejoin="miter"><path d="M50 50V10H80M50 50H90V80M50 50V90H20M50 50H10V20"/></g><g fill="currentColor"><circle cx="28" cy="28" r="5"/><circle cx="72" cy="28" r="5"/><circle cx="72" cy="72" r="5"/><circle cx="28" cy="72" r="5"/></g></symbol></svg>
+<div id="doors" aria-live="polite">
+  <div class="leaf l"><svg class="sw" aria-hidden="true"><use href="#sw"/></svg><span class="knob"></span></div>
+  <div class="leaf r"><svg class="sw" aria-hidden="true"><use href="#sw"/></svg><span class="knob"></span></div>
+  <div id="enter">
+    <p class="om" aria-hidden="true">ॐ</p>
+    <p>|| Shri Ganeshaya Namah ||</p>
+    <p class="dear" id="dear">You are invited</p>
+    <button id="openBtn">Open the invitation</button>
+  </div>
+</div>
+
+<div class="patola" aria-hidden="true"></div>
+
+<header class="hero">
+  <svg class='garland' aria-hidden='true' viewBox='0 0 1200 90' preserveAspectRatio='xMidYMin slice' xmlns='http://www.w3.org/2000/svg'><path d='M-50 0Q100 80 250 0Q400 80 550 0Q700 80 850 0Q1000 80 1150 0Q1250 60 1300 0' stroke='#0f7a4a' stroke-width='12' fill='none' stroke-dasharray='12 2'/><path d='M-50 0Q100 80 250 0Q400 80 550 0Q700 80 850 0Q1000 80 1150 0Q1250 60 1300 0' stroke='#ff8c1a' stroke-width='8' fill='none' stroke-linecap='round' stroke-dasharray='0.1 11'/><path d='M-50 0Q100 80 250 0Q400 80 550 0Q700 80 850 0Q1000 80 1150 0Q1250 60 1300 0' stroke='#f6b81a' stroke-width='6' fill='none' stroke-linecap='round' stroke-dasharray='0.1 11' stroke-dashoffset='5.5'/><path d='M250 4V62' stroke='#ff8c1a' stroke-width='6' stroke-linecap='round' stroke-dasharray='0.1 9'/><circle cx='250' cy='68' r='7' fill='#ff8c1a'/><circle cx='250' cy='68' r='3' fill='#f6b81a'/><path d='M550 4V62' stroke='#ff8c1a' stroke-width='6' stroke-linecap='round' stroke-dasharray='0.1 9'/><circle cx='550' cy='68' r='7' fill='#ff8c1a'/><circle cx='550' cy='68' r='3' fill='#f6b81a'/><path d='M850 4V62' stroke='#ff8c1a' stroke-width='6' stroke-linecap='round' stroke-dasharray='0.1 9'/><circle cx='850' cy='68' r='7' fill='#ff8c1a'/><circle cx='850' cy='68' r='3' fill='#f6b81a'/><path d='M1150 4V62' stroke='#ff8c1a' stroke-width='6' stroke-linecap='round' stroke-dasharray='0.1 9'/><circle cx='1150' cy='68' r='7' fill='#ff8c1a'/><circle cx='1150' cy='68' r='3' fill='#f6b81a'/></svg>
+  <div class="sym" aria-hidden="true"><svg class="sw" aria-hidden="true"><use href="#sw"/></svg><span class="om">ॐ</span><svg class="sw" aria-hidden="true"><use href="#sw"/></svg></div>
+  <p>|| Shri Ganeshaya Namah ||</p>
+  <h1>Shubh Vivah</h1>
+  <p class="names">Shubh <span>&amp;</span> Happy</p>
+  <p class="date">Friday, 11 December 2026</p>
+  <p class="inv">Vikram Samvat 2083, Magsar Sud 2</p>
+  <div id="count" aria-label="Countdown to the wedding"></div>
+  <svg class='palace' aria-hidden='true' viewBox='350 -90 500 290' preserveAspectRatio='xMidYMax meet' xmlns='http://www.w3.org/2000/svg' style='overflow:visible'><defs><pattern id='pt' width='24' height='24' patternUnits='userSpaceOnUse'><rect width='24' height='24' fill='#b3122b'/><path d='M12 2L22 12L12 22L2 12Z' fill='#f6b81a'/><path d='M12 6L18 12L12 18L6 12Z' fill='#0f7a4a'/><rect x='10.5' y='10.5' width='3' height='3' fill='#fff3d6'/></pattern><radialGradient id='fg'><stop offset='0' stop-color='#ffd166' stop-opacity='.9'/><stop offset='1' stop-color='#ff8c1a' stop-opacity='0'/></radialGradient></defs><rect x='-2000' y='188' width='5000' height='20' fill='#7a0d22'/><rect x='-2000' y='188' width='5000' height='3' fill='#f6b81a'/><circle cx='-1000' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-976' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-952' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-928' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-904' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-880' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-856' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-832' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-808' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-784' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-760' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-736' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-712' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-688' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-664' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-640' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-616' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-592' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-568' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-544' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-520' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-496' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-472' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-448' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-424' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-400' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-376' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-352' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-328' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-304' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-280' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-256' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-232' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-208' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-184' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-160' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-136' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-112' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-88' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-64' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-40' cy='198' r='2.6' fill='#f6b81a'/><circle cx='-16' cy='198' r='2.6' fill='#f6b81a'/><circle cx='8' cy='198' r='2.6' fill='#f6b81a'/><circle cx='32' cy='198' r='2.6' fill='#f6b81a'/><circle cx='56' cy='198' r='2.6' fill='#f6b81a'/><circle cx='80' cy='198' r='2.6' fill='#f6b81a'/><circle cx='104' cy='198' r='2.6' fill='#f6b81a'/><circle cx='128' cy='198' r='2.6' fill='#f6b81a'/><circle cx='152' cy='198' r='2.6' fill='#f6b81a'/><circle cx='176' cy='198' r='2.6' fill='#f6b81a'/><circle cx='200' cy='198' r='2.6' fill='#f6b81a'/><circle cx='224' cy='198' r='2.6' fill='#f6b81a'/><circle cx='248' cy='198' r='2.6' fill='#f6b81a'/><circle cx='272' cy='198' r='2.6' fill='#f6b81a'/><circle cx='296' cy='198' r='2.6' fill='#f6b81a'/><circle cx='320' cy='198' r='2.6' fill='#f6b81a'/><circle cx='344' cy='198' r='2.6' fill='#f6b81a'/><circle cx='368' cy='198' r='2.6' fill='#f6b81a'/><circle cx='392' cy='198' r='2.6' fill='#f6b81a'/><circle cx='416' cy='198' r='2.6' fill='#f6b81a'/><circle cx='440' cy='198' r='2.6' fill='#f6b81a'/><circle cx='464' cy='198' r='2.6' fill='#f6b81a'/><circle cx='488' cy='198' r='2.6' fill='#f6b81a'/><circle cx='512' cy='198' r='2.6' fill='#f6b81a'/><circle cx='536' cy='198' r='2.6' fill='#f6b81a'/><circle cx='560' cy='198' r='2.6' fill='#f6b81a'/><circle cx='584' cy='198' r='2.6' fill='#f6b81a'/><circle cx='608' cy='198' r='2.6' fill='#f6b81a'/><circle cx='632' cy='198' r='2.6' fill='#f6b81a'/><circle cx='656' cy='198' r='2.6' fill='#f6b81a'/><circle cx='680' cy='198' r='2.6' fill='#f6b81a'/><circle cx='704' cy='198' r='2.6' fill='#f6b81a'/><circle cx='728' cy='198' r='2.6' fill='#f6b81a'/><circle cx='752' cy='198' r='2.6' fill='#f6b81a'/><circle cx='776' cy='198' r='2.6' fill='#f6b81a'/><circle cx='800' cy='198' r='2.6' fill='#f6b81a'/><circle cx='824' cy='198' r='2.6' fill='#f6b81a'/><circle cx='848' cy='198' r='2.6' fill='#f6b81a'/><circle cx='872' cy='198' r='2.6' fill='#f6b81a'/><circle cx='896' cy='198' r='2.6' fill='#f6b81a'/><circle cx='920' cy='198' r='2.6' fill='#f6b81a'/><circle cx='944' cy='198' r='2.6' fill='#f6b81a'/><circle cx='968' cy='198' r='2.6' fill='#f6b81a'/><circle cx='992' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1016' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1040' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1064' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1088' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1112' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1136' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1160' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1184' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1208' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1232' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1256' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1280' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1304' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1328' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1352' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1376' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1400' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1424' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1448' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1472' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1496' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1520' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1544' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1568' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1592' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1616' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1640' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1664' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1688' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1712' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1736' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1760' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1784' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1808' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1832' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1856' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1880' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1904' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1928' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1952' cy='198' r='2.6' fill='#f6b81a'/><circle cx='1976' cy='198' r='2.6' fill='#f6b81a'/><circle cx='2000' cy='198' r='2.6' fill='#f6b81a'/><circle cx='2024' cy='198' r='2.6' fill='#f6b81a'/><circle cx='2048' cy='198' r='2.6' fill='#f6b81a'/><circle cx='2072' cy='198' r='2.6' fill='#f6b81a'/><circle cx='2096' cy='198' r='2.6' fill='#f6b81a'/><circle cx='2120' cy='198' r='2.6' fill='#f6b81a'/><circle cx='2144' cy='198' r='2.6' fill='#f6b81a'/><circle cx='2168' cy='198' r='2.6' fill='#f6b81a'/><circle cx='2192' cy='198' r='2.6' fill='#f6b81a'/><rect x='470' y='-5' width='12' height='185' fill='url(#pt)' opacity='.55'/><rect x='718' y='-5' width='12' height='185' fill='url(#pt)' opacity='.55'/><rect x='372' y='172' width='456' height='18' fill='#7a0d22'/><rect x='372' y='172' width='456' height='3' fill='#f6b81a'/><rect x='360' y='180' width='480' height='10' fill='#b3122b'/><path d='M392 181l8 4l-8 4l-8 -4z' fill='#f6b81a'/><path d='M432 181l8 4l-8 4l-8 -4z' fill='#f6b81a'/><path d='M472 181l8 4l-8 4l-8 -4z' fill='#f6b81a'/><path d='M512 181l8 4l-8 4l-8 -4z' fill='#f6b81a'/><path d='M552 181l8 4l-8 4l-8 -4z' fill='#f6b81a'/><path d='M592 181l8 4l-8 4l-8 -4z' fill='#f6b81a'/><path d='M632 181l8 4l-8 4l-8 -4z' fill='#f6b81a'/><path d='M672 181l8 4l-8 4l-8 -4z' fill='#f6b81a'/><path d='M712 181l8 4l-8 4l-8 -4z' fill='#f6b81a'/><path d='M752 181l8 4l-8 4l-8 -4z' fill='#f6b81a'/><path d='M792 181l8 4l-8 4l-8 -4z' fill='#f6b81a'/><rect x='402' y='-5' width='24' height='180' fill='url(#pt)' stroke='#f6b81a' stroke-width='2'/><rect x='397' y='168' width='34' height='10' fill='#f6b81a'/><rect x='399' y='-8' width='30' height='8' fill='#f6b81a'/><rect x='776' y='-5' width='24' height='180' fill='url(#pt)' stroke='#f6b81a' stroke-width='2'/><rect x='771' y='168' width='34' height='10' fill='#f6b81a'/><rect x='773' y='-8' width='30' height='8' fill='#f6b81a'/><rect x='392' y='-28' width='416' height='24' fill='#b3122b' stroke='#f6b81a' stroke-width='2'/><rect x='392' y='-20' width='416' height='4' fill='#f6b81a'/><rect x='440' y='-46' width='320' height='18' fill='#b3122b' stroke='#f6b81a' stroke-width='2'/><rect x='440' y='-40' width='320' height='3' fill='#f6b81a'/><path d='M510 -46C510 -68 556 -78 600 -86C644 -78 690 -68 690 -46Z' fill='#f6b81a' stroke='#b3122b' stroke-width='2'/><path d='M570 -46Q564 -70 600 -84' stroke='#b3122b' stroke-width='1.5' fill='none'/><path d='M588 -46Q586 -70 600 -84' stroke='#b3122b' stroke-width='1.5' fill='none'/><path d='M612 -46Q614 -70 600 -84' stroke='#b3122b' stroke-width='1.5' fill='none'/><path d='M630 -46Q636 -70 600 -84' stroke='#b3122b' stroke-width='1.5' fill='none'/><circle cx='600' cy='-88' r='3' fill='#ff8c1a'/><path d='M392 -4a13 15 0 0 0 26 0Z' fill='#d81b60' stroke='#b3122b' stroke-width='1'/><path d='M418 -4a13 15 0 0 0 26 0Z' fill='#f6b81a' stroke='#b3122b' stroke-width='1'/><path d='M444 -4a13 15 0 0 0 26 0Z' fill='#fff3d6' stroke='#b3122b' stroke-width='1'/><path d='M470 -4a13 15 0 0 0 26 0Z' fill='#d81b60' stroke='#b3122b' stroke-width='1'/><path d='M496 -4a13 15 0 0 0 26 0Z' fill='#f6b81a' stroke='#b3122b' stroke-width='1'/><path d='M522 -4a13 15 0 0 0 26 0Z' fill='#fff3d6' stroke='#b3122b' stroke-width='1'/><path d='M548 -4a13 15 0 0 0 26 0Z' fill='#d81b60' stroke='#b3122b' stroke-width='1'/><path d='M574 -4a13 15 0 0 0 26 0Z' fill='#f6b81a' stroke='#b3122b' stroke-width='1'/><path d='M600 -4a13 15 0 0 0 26 0Z' fill='#fff3d6' stroke='#b3122b' stroke-width='1'/><path d='M626 -4a13 15 0 0 0 26 0Z' fill='#d81b60' stroke='#b3122b' stroke-width='1'/><path d='M652 -4a13 15 0 0 0 26 0Z' fill='#f6b81a' stroke='#b3122b' stroke-width='1'/><path d='M678 -4a13 15 0 0 0 26 0Z' fill='#fff3d6' stroke='#b3122b' stroke-width='1'/><path d='M704 -4a13 15 0 0 0 26 0Z' fill='#d81b60' stroke='#b3122b' stroke-width='1'/><path d='M730 -4a13 15 0 0 0 26 0Z' fill='#f6b81a' stroke='#b3122b' stroke-width='1'/><path d='M756 -4a13 15 0 0 0 26 0Z' fill='#fff3d6' stroke='#b3122b' stroke-width='1'/><path d='M782 -4a13 15 0 0 0 26 0Z' fill='#d81b60' stroke='#b3122b' stroke-width='1'/><path d='M430 10V42' stroke='#0f7a4a' stroke-width='2'/><circle cx='430' cy='44' r='5' fill='#ff8c1a'/><circle cx='430' cy='44' r='2' fill='#f6b81a'/><path d='M466 10V42' stroke='#0f7a4a' stroke-width='2'/><circle cx='466' cy='44' r='5' fill='#ff8c1a'/><circle cx='466' cy='44' r='2' fill='#f6b81a'/><path d='M502 10V42' stroke='#0f7a4a' stroke-width='2'/><circle cx='502' cy='44' r='5' fill='#ff8c1a'/><circle cx='502' cy='44' r='2' fill='#f6b81a'/><path d='M538 10V42' stroke='#0f7a4a' stroke-width='2'/><circle cx='538' cy='44' r='5' fill='#ff8c1a'/><circle cx='538' cy='44' r='2' fill='#f6b81a'/><path d='M574 10V42' stroke='#0f7a4a' stroke-width='2'/><circle cx='574' cy='44' r='5' fill='#ff8c1a'/><circle cx='574' cy='44' r='2' fill='#f6b81a'/><path d='M610 10V42' stroke='#0f7a4a' stroke-width='2'/><circle cx='610' cy='44' r='5' fill='#ff8c1a'/><circle cx='610' cy='44' r='2' fill='#f6b81a'/><path d='M646 10V42' stroke='#0f7a4a' stroke-width='2'/><circle cx='646' cy='44' r='5' fill='#ff8c1a'/><circle cx='646' cy='44' r='2' fill='#f6b81a'/><path d='M682 10V42' stroke='#0f7a4a' stroke-width='2'/><circle cx='682' cy='44' r='5' fill='#ff8c1a'/><circle cx='682' cy='44' r='2' fill='#f6b81a'/><path d='M718 10V42' stroke='#0f7a4a' stroke-width='2'/><circle cx='718' cy='44' r='5' fill='#ff8c1a'/><circle cx='718' cy='44' r='2' fill='#f6b81a'/><path d='M754 10V42' stroke='#0f7a4a' stroke-width='2'/><circle cx='754' cy='44' r='5' fill='#ff8c1a'/><circle cx='754' cy='44' r='2' fill='#f6b81a'/><path d='M426 6Q600 120 776 6' stroke='#0f7a4a' stroke-width='10' fill='none' stroke-dasharray='12 2'/><path d='M426 6Q600 120 776 6' stroke='#ff8c1a' stroke-width='8' fill='none' stroke-linecap='round' stroke-dasharray='0.1 11'/><path d='M426 6Q600 120 776 6' stroke='#f6b81a' stroke-width='6' fill='none' stroke-linecap='round' stroke-dasharray='0.1 11' stroke-dashoffset='5.5'/><path d='M380 -2V130' stroke='#ff8c1a' stroke-width='7' stroke-linecap='round' stroke-dasharray='0.1 10'/><path d='M380 3V130' stroke='#f6b81a' stroke-width='5' stroke-linecap='round' stroke-dasharray='0.1 10' stroke-dashoffset='5'/><path d='M842 -2V130' stroke='#ff8c1a' stroke-width='7' stroke-linecap='round' stroke-dasharray='0.1 10'/><path d='M842 3V130' stroke='#f6b81a' stroke-width='5' stroke-linecap='round' stroke-dasharray='0.1 10' stroke-dashoffset='5'/><circle cx='600' cy='132' r='60' fill='url(#fg)'/><rect x='560' y='152' width='80' height='22' fill='#7a0d22' stroke='#f6b81a' stroke-width='2'/><rect x='568' y='148' width='64' height='6' fill='#b3122b'/><path d='M600 150Q576 126 594 96Q598 114 610 104Q628 128 600 150Z' fill='#ff8c1a'/><path d='M600 150Q588 134 598 114Q604 126 612 120Q618 136 600 150Z' fill='#f6b81a'/><path d='M580 150Q570 138 578 124Q584 136 588 150Z' fill='#ff8c1a'/><path d='M620 150Q630 138 624 126Q616 136 612 150Z' fill='#ff8c1a'/><path d='M504 172Q494 154 508 144H528Q542 154 532 172Z' fill='#f6b81a' stroke='#b3122b' stroke-width='1.5'/><rect x='502' y='158' width='32' height='5' fill='#b3122b'/><path d='M518 142L500 120L514 138Z M518 142L518 114L522 138Z M518 142L536 120L522 138Z' fill='#0f7a4a'/><circle cx='518' cy='140' r='8' fill='#8a5a2b'/><circle cx='518' cy='140' r='3' fill='#ff8c1a'/><path d='M668 172Q658 154 672 144H692Q706 154 696 172Z' fill='#f6b81a' stroke='#b3122b' stroke-width='1.5'/><rect x='666' y='158' width='32' height='5' fill='#b3122b'/><path d='M682 142L664 120L678 138Z M682 142L682 114L686 138Z M682 142L700 120L686 138Z' fill='#0f7a4a'/><circle cx='682' cy='140' r='8' fill='#8a5a2b'/><circle cx='682' cy='140' r='3' fill='#ff8c1a'/></svg>
+</header>
+<div class="bandhani" aria-hidden="true"></div>
+
+<section id="invite">
+  <h2>Mangal Parinay</h2>
+  <p class="blessing">|| Shri Sandery Mataya Namah || Shri Bhavani Mataya Namah || Jay Meldi Mataya Namah || Shri Siddhnath Mahadev Namah ||</p>
+  <div class="cols">
+    <div class="panel">
+      <p>With joyful hearts, and by the immense grace of our family deity Shri Sandery Mataji, we announce the marriage of our son</p>
+      <h3>Shubh</h3>
+      <p>son of Smt. Alkaben &amp; Shri Bharatkumar Ambalal Amin<br>of Sander (currently Nashik)</p>
+    </div>
+    <div class="panel">
+      <p>with</p>
+      <h3>Happy</h3>
+      <p>daughter of Smt. Gitaben &amp; Shri Mukeshbhai Revabhai Patel<br>of Balisana (currently Nashik)</p>
+    </div>
+  </div>
+  <p class="story">On this auspicious occasion, we request you and your family to join our celebration, bless the newlyweds, and add to the glory of our joy.</p>
+</section>
+
+<section id="events">
+  <h2>Auspicious Events</h2>
+  <p class="blessing">&ldquo;Come with Riddhi and Siddhi, O Gauri-nandan Ganesh, with your family. Come, Brahma, Vishnu, Mahesh.&rdquo;</p>
+  <div id="timeline"></div>
+</section>
+
+<section id="venue">
+  <h2>Venues</h2>
+  <div class="venues">
+    <div class="panel"><h3>Engagement Venue</h3><p>Ring Ceremony<br>Wednesday, 9 December, 8:30 AM</p>
+      <a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/VcwJ925Whkis2b9z6">Open in Maps</a></div>
+    <div class="panel"><h3>Wedding Venue</h3><p>Nathani Pati ni Vadi<br>Balisana, Ta. Dist. Patan</p>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Nathani+Pati+ni+Vadi+Balisana+Patan">Open in Maps</a></div>
+    <div class="panel"><h3>Groom&rsquo;s Family</h3><p>Shri Bharatkumar Ambalal Amin<br>Gadhvivaas, Sander<br>District Patan, Gujarat</p>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Gadhvivas+Sander+Patan+Gujarat">Open in Maps</a></div>
+    <div class="panel"><h3>Bride&rsquo;s Family</h3><p>Shri Mukeshbhai Revabhai Patel<br>Bhatvado, Balisana, Ta. Dist. Patan</p>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Bhatvado+Balisana+Patan">Open in Maps</a></div>
+  </div>
+</section>
+
+<section id="photos">
+  <h2>Our Story</h2>
+  <div class="gallery" id="gallery"></div>
+  <p class="story" id="story">Two families, one celebration. Add a few lines about how you met here.</p>
+</section>
+
+<div class="bandhani" aria-hidden="true"></div>
+<div class="patola" aria-hidden="true"></div>
+<section id="thanks" style="text-align:center">
+  <h2>Thank You</h2>
+  <p class="story" style="margin-top:0">Your presence and blessings will make our celebration complete. We look forward to welcoming you with love and joy.</p>
+</section>
+<footer>
+  <p>Invitation from</p>
+  <p><b>Shri Mukeshbhai Revabhai Patel &amp; Smt. Gitaben Mukeshbhai Patel</b><br>and<br><b>Shri Bharatkumar Ambalal Amin &amp; Smt. Alkaben Bharatkumar Amin</b></p>
+</footer>
+
+<script>
+/* ===== EDIT THESE ===== */
+const PHOTOS = ["photos/1.jpg","photos/2.jpg","photos/3.jpg","photos/4.jpg"];                          // e.g. ["photos/1.jpg","photos/2.jpg","photos/3.jpg"]
+const STORY = "Two souls, one timeless story.";                           // your story text (leave empty to keep placeholder)
+/* ====================== */
+
+const D9 = "2026-12-09", D10 = "2026-12-10", D11 = "2026-12-11";
+const days = [
+ {title:"Wednesday, 9 December 2026", sides:[
+  {name:"Engagement", ev:[
+   ["Ring Ceremony",D9,"08:30","Exchange of rings","","https://maps.app.goo.gl/VcwJ925Whkis2b9z6"]]}]},
+ {title:"Thursday, 10 December 2026 (Magsar Sud 1)", sides:[
+  {name:"Groom's family, Sander", ev:[
+   ["Ganesh Sthapana",D10,"07:00","","Sander"],
+   ["Swaruchi Bhojan (lunch)",D10,"10:30","Siddhanath Mahadev ni Vadi, Pol, Sander","Sander"],
+   ["Lagna Vadhamana",D10,"14:00","","Sander"],
+   ["Pithi",D10,"16:00","","Sander"],
+   ["Swaruchi Bhojan (dinner)",D10,"17:30","From 5:30 PM until you arrive","Sander"],
+   ["Varghodo (groom's procession)",D10,"20:00","","Sander"]]},
+  {name:"Bride's family, Balisana", ev:[
+   ["Ganesh Sthapana",D10,"07:00","","Balisana"],
+   ["Lagna Lakhvanu Muhurat",D10,"09:00","Writing of the wedding date","Balisana"],
+   ["Grah Shanti",D10,"12:30","","Balisana"],
+   ["Haldi Ras",D10,"16:00","","Balisana"],
+   ["Bhojan Samarambh (dinner)",D10,"18:00","From 6:00 PM until you arrive, Nathani Pati ni Vadi","Balisana"]]}]},
+ {title:"Friday, 11 December 2026 (Magsar Sud 2), Wedding Day", sides:[
+  {name:"Groom's family", ev:[
+   ["Jaan Prasthan",D11,"07:00","Groom's party leaves Sander for Balisana","Sander"]]},
+  {name:"At the wedding venue, Balisana", ev:[
+   ["Bhojan Samarambh (lunch)",D11,"11:00","Nathani Pati ni Vadi","Balisana"],
+   ["Hast Melap",D11,"12:00","12:00 PM to 1:30 PM, Nathani Pati ni Vadi","Balisana"],
+   ["Kanya Vidaay",D11,"16:30","","Balisana"]]}]}
+];
+const fmt=t=>{let[h,m]=t.split(":").map(Number);return (h%12||12)+":"+String(m).padStart(2,"0")+(h<12?" AM":" PM")};
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tl=document.getElementById("timeline");
+let id=0;const evs=[];
+days.forEach(d=>{
+  let h=`<div class="day"><h3>${esc(d.title)}</h3><div class="cols">`;
+  d.sides.forEach(s=>{
+    h+=`<div class="side"><h4>${esc(s.name)}</h4>`;
+    s.ev.forEach(e=>{evs[id]=e;
+      h+=`<div class="ev"><div><b>${fmt(e[2])} &nbsp;${esc(e[0])}</b>${e[3]?`<small>${esc(e[3])}</small>`:""}</div><span class="acts">${e[5]?`<a class="btn ghost" target="_blank" rel="noopener" href="${e[5]}">Map</a>`:""}<button class="ghost" data-i="${id}" aria-label="Add ${esc(e[0])} to calendar">+ Calendar</button></span></div>`;id++});
+    h+=`</div>`});
+  tl.insertAdjacentHTML("beforeend",h+`</div></div>`);
+});
+tl.addEventListener("click",ev=>{
+  const b=ev.target.closest("button[data-i]");if(!b)return;
+  const e=evs[b.dataset.i],st=e[1].replace(/-/g,"")+"T"+e[2].replace(":","")+"00";
+  const [h,m]=e[2].split(":").map(Number),en=e[1].replace(/-/g,"")+"T"+String(Math.min(h+2,23)).padStart(2,"0")+String(m).padStart(2,"0")+"00";
+  const ics=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//ShubhHappy//EN","BEGIN:VEVENT","UID:"+st+"-"+b.dataset.i+"@shubh-happy","DTSTAMP:20261003T000000Z",
+   "DTSTART;TZID=Asia/Kolkata:"+st,"DTEND;TZID=Asia/Kolkata:"+en,"SUMMARY:"+e[0]+" | Shubh & Happy Wedding","LOCATION:"+(e[5]||((e[4]?e[4]+", ":"")+"Patan, Gujarat")),"DESCRIPTION:"+e[3],"END:VEVENT","END:VCALENDAR"].join("\r\n");
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([ics],{type:"text/calendar"}));a.download="shubh-happy-"+e[0].replace(/\W+/g,"-")+".ics";a.click();
+});
+
+/* personalised greeting: ?guest=Patel+Family */
+const g=new URLSearchParams(location.search).get("guest");
+if(g){document.getElementById("dear").textContent="Dear "+g;}
+document.getElementById("openBtn").onclick=()=>document.getElementById("doors").classList.add("open");
+
+/* countdown */
+const target=new Date("2026-12-11T12:00:00+05:30");
+const cd=document.getElementById("count");
+function tick(){
+  let s=Math.max(0,Math.floor((target-new Date())/1000));
+  const v=[["Days",86400],["Hours",3600],["Minutes",60],["Seconds",1]].map(([n,k])=>{const x=Math.floor(s/k);s-=x*k;return `<div><b>${x}</b>${n}</div>`});
+  cd.innerHTML=v.join("");
+}
+tick();setInterval(tick,1000);
+
+/* gallery */
+const gal=document.getElementById("gallery");
+const n=PHOTOS.length||3;
+for(let i=0;i<n;i++){
+  const d=document.createElement("div");d.className="ph";
+  if(PHOTOS[i]){const im=new Image();im.src=PHOTOS[i];im.alt="Shubh and Happy";im.loading="lazy";im.onerror=()=>{d.textContent="Photo coming soon"};d.appendChild(im)}
+  else d.innerHTML="Your photo<br>goes here";
+  gal.appendChild(d);
+}
+if(STORY)document.getElementById("story").textContent=STORY;
+
+</script>
+</body>
+</html>
